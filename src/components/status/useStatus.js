@@ -7,15 +7,15 @@ export default (components) => {
   useEffect(() => {
     let statusSet = false;
 
-    if (getComponentLabelPercent(components, "operational") < 70) {
-      setStatus(statuses.issues);
-      statusSet = true;
-    }
+    // if (getComponentLabelPercent(components, "operational") < 70) {
+    //   setStatus(statuses.issues);
+    //   statusSet = true;
+    // }
 
-    if (getComponentLabelPercent(components, "major outage") > 0) {
-      setStatus(statuses.outage);
-      statusSet = true;
-    }
+    // if (getComponentLabelPercent(components, "major outage") > 0) {
+    //   setStatus(statuses.outage);
+    //   statusSet = true;
+    // }
 
     if (!statusSet) setStatus(statuses.operational);
   }, [components]);
